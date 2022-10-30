@@ -7,33 +7,44 @@ import {
     Heading,
     IconButton,
     Spacer,
+    useColorMode,
     useDisclosure,
     VStack,
 } from '@chakra-ui/react';
 import { GrClose } from 'react-icons/gr';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { MdDarkMode } from 'react-icons/md';
+import { BsSun } from 'react-icons/bs';
+import { AppContext } from '../Context/ContextApi';
 
 const Navbar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
+
+    const { colorMode, toggleColorMode } = useColorMode();
+
+    const { homeRef, aboutRef, skillRef, projectRef } =
+        React.useContext(AppContext);
+
+    const [elm, setElm] = React.useState('home');
 
     return (
         <>
             <Flex
                 alignItems="center"
-                gap="2"
-                px="40px"
+                px={{ base: '20px', md: '40px' }}
                 py="10px"
                 w="100%"
                 pos="sticky"
                 top="0px"
-                bgColor="white"
-                border="1px solid lightgray"
+                bgColor={colorMode === 'light' ? 'white' : '#1a202c'}
+                borderBottom="1px solid lightgray"
+                color={colorMode === 'light' ? 'rgba(0,0,0,.9)' : 'white'}
             >
                 <Box p="2">
                     <Heading
                         fontSize="20px"
-                        color="rgba(0,0,0,.9)"
                         fontWeight="bold"
+                        fontFamily="Maven Pro"
                     >
                         AMAN
                     </Heading>
@@ -51,14 +62,20 @@ const Navbar = () => {
                 <Box
                     display={{ base: 'none', md: 'flex' }}
                     gap="50px"
-                    color="#00000080"
+                    color={colorMode === 'light' ? '#00000080' : 'white'}
                 >
                     <Heading
                         size="sm"
                         className={styles.sections}
                         fontFamily="Maven Pro"
-                        color="#ffc200"
                         fontWeight="bold"
+                        color={elm === 'home' ? '#ffc200' : null}
+                        onClick={() => {
+                            homeRef.current.scrollIntoView({
+                                behavior: 'smooth',
+                            });
+                            setElm('home');
+                        }}
                     >
                         Home
                     </Heading>
@@ -67,6 +84,13 @@ const Navbar = () => {
                         className={styles.sections}
                         fontFamily="Maven Pro"
                         fontWeight="bold"
+                        color={elm === 'about' ? '#ffc200' : null}
+                        onClick={() => {
+                            aboutRef.current.scrollIntoView({
+                                behavior: 'smooth',
+                            });
+                            setElm('about');
+                        }}
                     >
                         About
                     </Heading>
@@ -75,6 +99,13 @@ const Navbar = () => {
                         className={styles.sections}
                         fontFamily="Maven Pro"
                         fontWeight="bold"
+                        color={elm === 'skill' ? '#ffc200' : null}
+                        onClick={() => {
+                            skillRef.current.scrollIntoView({
+                                behavior: 'smooth',
+                            });
+                            setElm('skill');
+                        }}
                     >
                         Skills
                     </Heading>
@@ -83,6 +114,13 @@ const Navbar = () => {
                         className={styles.sections}
                         fontFamily="Maven Pro"
                         fontWeight="bold"
+                        color={elm === 'project' ? '#ffc200' : null}
+                        onClick={() => {
+                            projectRef.current.scrollIntoView({
+                                behavior: 'smooth',
+                            });
+                            setElm('project');
+                        }}
                     >
                         Projects
                     </Heading>
@@ -93,6 +131,16 @@ const Navbar = () => {
                         fontWeight="bold"
                     >
                         Contact
+                    </Heading>
+                    <Heading
+                        onClick={toggleColorMode}
+                        bg="transparent"
+                        size="md"
+                        className={styles.sections}
+                        fontFamily="Maven Pro"
+                        fontWeight="bold"
+                    >
+                        {colorMode === 'light' ? <MdDarkMode /> : <BsSun />}
                     </Heading>
                 </Box>
             </Flex>
@@ -102,18 +150,25 @@ const Navbar = () => {
                     pb={4}
                     display={{ base: 'flex', md: 'none' }}
                     gap="10px"
-                    color="#00000080"
+                    color={colorMode === 'light' ? '#00000080' : 'white'}
                     pos="fixed"
                     w="100%"
                     pt="10px"
                     className={styles.responsive}
+                    bgColor={colorMode === 'light' ? 'white' : '#1a202c'}
                 >
                     <Heading
                         size="sm"
                         className={styles.sections}
                         fontFamily="Maven Pro"
-                        color="#ffc200"
                         fontWeight="bold"
+                        color={elm === 'home' ? '#ffc200' : null}
+                        onClick={() => {
+                            homeRef.current.scrollIntoView({
+                                behavior: 'smooth',
+                            });
+                            setElm('home');
+                        }}
                     >
                         Home
                     </Heading>
@@ -122,6 +177,13 @@ const Navbar = () => {
                         className={styles.sections}
                         fontFamily="Maven Pro"
                         fontWeight="bold"
+                        color={elm === 'about' ? '#ffc200' : null}
+                        onClick={() => {
+                            aboutRef.current.scrollIntoView({
+                                behavior: 'smooth',
+                            });
+                            setElm('about');
+                        }}
                     >
                         About
                     </Heading>
@@ -130,6 +192,13 @@ const Navbar = () => {
                         className={styles.sections}
                         fontFamily="Maven Pro"
                         fontWeight="bold"
+                        color={elm === 'skill' ? '#ffc200' : null}
+                        onClick={() => {
+                            skillRef.current.scrollIntoView({
+                                behavior: 'smooth',
+                            });
+                            setElm('skill');
+                        }}
                     >
                         Skills
                     </Heading>
@@ -138,6 +207,13 @@ const Navbar = () => {
                         className={styles.sections}
                         fontFamily="Maven Pro"
                         fontWeight="bold"
+                        color={elm === 'project' ? '#ffc200' : null}
+                        onClick={() => {
+                            projectRef.current.scrollIntoView({
+                                behavior: 'smooth',
+                            });
+                            setElm('project');
+                        }}
                     >
                         Projects
                     </Heading>
@@ -148,6 +224,16 @@ const Navbar = () => {
                         fontWeight="bold"
                     >
                         Contact
+                    </Heading>
+                    <Heading
+                        onClick={toggleColorMode}
+                        bg="transparent"
+                        size="md"
+                        className={styles.sections}
+                        fontFamily="Maven Pro"
+                        fontWeight="bold"
+                    >
+                        {colorMode === 'light' ? <MdDarkMode /> : <BsSun />}
                     </Heading>
                     <Divider />
                 </VStack>
