@@ -8,7 +8,7 @@ const Skills = () => {
     return (
         <Flex
             fontFamily="Maven Pro"
-            paddingTop={'80px'}
+            paddingTop={'100px'}
             px={{ base: '25px', md: '45px' }}
             flexDirection="column"
             alignItems={'flex-start'}
@@ -54,7 +54,7 @@ const Skills = () => {
                     <Image src="/git.png" boxSize="14" />
                 </Tooltip>
                 <Tooltip label="Github">
-                    <Image src="/github.png" boxSize="14" />
+                    <Image src="/githubDark.png" boxSize="16" />
                 </Tooltip>
                 <Tooltip label="VS Code">
                     <Image src="/vscode.png" boxSize="14" />

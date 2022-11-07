@@ -7,7 +7,7 @@ const About = () => {
     return (
         <Flex
             px={{ base: '25px', md: '45px' }}
-            paddingTop={'80px'}
+            paddingTop={'100px'}
             justifyContent={'space-between'}
             flexDirection={{ base: 'column', lg: 'row' }}
             gap="60px"

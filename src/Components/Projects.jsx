@@ -42,7 +42,7 @@ const Projects = ({ img, title, desc, code, live, stack }) => {
                 src={img}
                 border={'1px solid #5b5b5b'}
                 maxW="700px"
-                w={{ base: '100%', md: '50%' }}
+                w={{ base: '100%', md: '45%' }}
             />
             <Box
                 textAlign={'left'}

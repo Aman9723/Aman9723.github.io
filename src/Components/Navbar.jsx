@@ -22,7 +22,7 @@ const Navbar = () => {
 
     const { colorMode, toggleColorMode } = useColorMode();
 
-    const { homeRef, aboutRef, skillRef, projectRef } =
+    const { homeRef, aboutRef, skillRef, projectRef, contactRef } =
         React.useContext(AppContext);
 
     const [elm, setElm] = React.useState('home');
@@ -129,6 +129,12 @@ const Navbar = () => {
                         className={styles.sections}
                         fontFamily="Maven Pro"
                         fontWeight="bold"
+                        onClick={() => {
+                            contactRef.current.scrollIntoView({
+                                behavior: 'smooth',
+                            });
+                            setElm('contact');
+                        }}
                     >
                         Contact
                     </Heading>
@@ -222,6 +228,12 @@ const Navbar = () => {
                         className={styles.sections}
                         fontFamily="Maven Pro"
                         fontWeight="bold"
+                        onClick={() => {
+                            contactRef.current.scrollIntoView({
+                                behavior: 'smooth',
+                            });
+                            setElm('contact');
+                        }}
                     >
                         Contact
                     </Heading>

@@ -2,6 +2,7 @@ import { Heading } from '@chakra-ui/react';
 import React from 'react';
 import './App.css';
 import About from './Components/About';
+import Contact from './Components/Contact';
 import Github from './Components/Github';
 import Home from './Components/Home';
 import Navbar from './Components/Navbar';
@@ -22,7 +23,7 @@ function App() {
             <Heading
                 fontSize={'35px'}
                 fontFamily="Maven Pro"
-                paddingTop="80px"
+                paddingTop="100px"
                 paddingBottom={'20px'}
                 textAlign="left"
                 px={{ base: '25px', md: '45px' }}
@@ -41,7 +42,7 @@ function App() {
                 live="https://the-great-aman9723-site.netlify.app/"
                 stack={['HTML5', 'CSS3', 'JavaScript', 'React.js', 'Chakra UI']}
             />
-            <div style={{ height: '100px' }}></div>
+            <Contact />
         </div>
     );
 }

@@ -5,7 +5,7 @@ import GitHubCalendar from 'react-github-calendar';
 const Github = () => {
     return (
         <Flex
-            paddingTop={'80px'}
+            paddingTop={'100px'}
             px={{ base: '25px', md: '45px' }}
             flexDirection="column"
             alignItems="flex-start"
