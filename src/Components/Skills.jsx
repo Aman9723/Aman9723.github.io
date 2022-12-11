@@ -57,10 +57,19 @@ const Skills = () => {
                     <Image src="/githubDark.png" boxSize="16" />
                 </Tooltip>
                 <Tooltip label="VS Code">
-                    <Image src="/vscode.png" boxSize="14" />
+                    <Image src="/vscode.png" boxSize="16" />
                 </Tooltip>
                 <Tooltip label="Postman">
                     <Image src="/postman.png" boxSize="14" />
+                </Tooltip>
+                <Tooltip label="Redis">
+                    <Image src="/redis.png" boxSize="16" />
+                </Tooltip>
+                <Tooltip label="Next.js">
+                    <Image src="/next.png" boxSize="14" />
+                </Tooltip>
+                <Tooltip label="AWS">
+                    <Image src="/aws.png" boxSize="16" />
                 </Tooltip>
             </Flex>
         </Flex>

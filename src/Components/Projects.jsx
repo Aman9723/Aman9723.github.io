@@ -26,24 +26,21 @@ let obj = {
     Github: '/github.png',
     'VS Code': '/vscode.png',
     Postman: '/postman.png',
+    'Next.js': '/next.png',
+    Redis: '/redis.png',
 };
 
 const Projects = ({ img, title, desc, code, live, stack }) => {
     return (
         <Flex
             fontFamily="Maven Pro"
-            flexDirection={{ base: 'column', md: 'row' }}
+            flexDirection={{ base: 'column', lg: 'row' }}
             justifyContent={'space-between'}
             boxSizing={'border-box'}
             px={{ base: '25px', md: '45px' }}
             gap="60px"
+            marginBottom={'80px'}
         >
-            <Image
-                src={img}
-                border={'1px solid #5b5b5b'}
-                maxW="700px"
-                w={{ base: '100%', md: '45%' }}
-            />
             <Box
                 textAlign={'left'}
                 display="flex"
@@ -53,17 +50,18 @@ const Projects = ({ img, title, desc, code, live, stack }) => {
                 <Heading fontSize={'25px'} fontFamily="Maven Pro">
                     {title}
                 </Heading>
-                <Grid gap={'10px'} templateColumns="repeat(5, 40px)">
+                {/* templateColumns="repeat(5, 40px)" */}
+                <Flex gap={'10px'} wrap="wrap">
                     {stack.map((item) => (
                         <Tooltip label={item} key={item}>
-                            <Image src={obj[item]} />
+                            <Image src={obj[item]} boxSize="10" />
                         </Tooltip>
                     ))}
-                </Grid>
+                </Flex>
                 <Text fontSize={'18px'} color="#5b5b5b">
                     {desc}
                 </Text>
-                <ButtonGroup>
+                <ButtonGroup zIndex={-1}>
                     <Button
                         onClick={() => window.open(code, '_blank')}
                         color={'#fff'}
@@ -83,6 +81,12 @@ const Projects = ({ img, title, desc, code, live, stack }) => {
                     </Button>
                 </ButtonGroup>
             </Box>
+            <Image
+                src={img}
+                border={'1px solid #5b5b5b'}
+                width="500px"
+                w={{ base: '100%', lg: '500px' }}
+            />
         </Flex>
     );
 };
