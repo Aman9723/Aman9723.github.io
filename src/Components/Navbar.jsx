@@ -39,6 +39,7 @@ const Navbar = () => {
                 bgColor={colorMode === 'light' ? 'white' : '#1a202c'}
                 borderBottom="1px solid lightgray"
                 color={colorMode === 'light' ? 'rgba(0,0,0,.9)' : 'white'}
+                zIndex="1"
             >
                 <Box p="2">
                     <Heading
@@ -162,6 +163,7 @@ const Navbar = () => {
                     pt="10px"
                     className={styles.responsive}
                     bgColor={colorMode === 'light' ? 'white' : '#1a202c'}
+                    zIndex="1"
                 >
                     <Heading
                         size="sm"

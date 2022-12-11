@@ -50,7 +50,6 @@ const Projects = ({ img, title, desc, code, live, stack }) => {
                 <Heading fontSize={'25px'} fontFamily="Maven Pro">
                     {title}
                 </Heading>
-                {/* templateColumns="repeat(5, 40px)" */}
                 <Flex gap={'10px'} wrap="wrap">
                     {stack.map((item) => (
                         <Tooltip label={item} key={item}>
@@ -61,7 +60,7 @@ const Projects = ({ img, title, desc, code, live, stack }) => {
                 <Text fontSize={'18px'} color="#5b5b5b">
                     {desc}
                 </Text>
-                <ButtonGroup zIndex={-1}>
+                <ButtonGroup>
                     <Button
                         onClick={() => window.open(code, '_blank')}
                         color={'#fff'}
