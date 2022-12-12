@@ -60,6 +60,14 @@ function App() {
                 stack={['HTML5', 'CSS3', 'React.js', 'Chakra UI']}
             />
             <Projects
+                img="/codecov.png"
+                title="Codecov Clone"
+                desc="Codecov is the leading, dedicated code coverage solution. Codecov provides metrics and insights into the results of tests through code coverage reports."
+                code="https://github.com/Nasirimam/resilient-gate-1588"
+                live="https://fluffy-zabaione-722b2d.netlify.app/"
+                stack={['HTML5', 'CSS3', 'JavaScript']}
+            />
+            <Projects
                 img="/lyst.png"
                 title="Lyst Clone"
                 desc="This is a clone of Lyst. It is a global fashion search platform, offering fashion products from the world's leading fashion brands and stores online."
