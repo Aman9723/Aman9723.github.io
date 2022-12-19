@@ -69,18 +69,20 @@ const Home = () => {
                     “Once a new technology rolls over you, if you're not part of
                     the steamroller, you're part of the road.” - Stewart Brand
                 </Text>
-                <a
-                    href="https://drive.google.com/file/d/17k_javv_q5RsJScVp2zdBjjKkmDIbjXh/view?usp=sharing"
-                    target="_blank"
-                >
+                <a href="Aman-Singh-Chauhan-Resume.pdf" download>
                     <Button
-                        zIndex={'-1'}
                         bg={'#eee'}
                         color="#5b5b5b"
                         _hover={{ colorScheme: '#ffc200' }}
+                        onClick={() => {
+                            window.open(
+                                'https://drive.google.com/file/d/17k_javv_q5RsJScVp2zdBjjKkmDIbjXh/view?usp=sharing',
+                                '_blank'
+                            );
+                        }}
                     >
                         <GrDocumentText />
-                        &nbsp; Visit Resume
+                        &nbsp; Resume
                     </Button>
                 </a>
             </VStack>
