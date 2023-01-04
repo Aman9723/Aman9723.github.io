@@ -15,11 +15,7 @@ const Github = () => {
             <Heading fontSize={'35px'} fontFamily="Maven Pro">
                 Github Stats
             </Heading>
-            <GitHubCalendar
-                username="aman9723"
-                year={new Date().getFullYear()}
-            />
-
+            <GitHubCalendar username="aman9723" />
             <Flex gap={'15px'} flexDirection={{ base: 'column', lg: 'row' }}>
                 <Image src="https://github-readme-stats.vercel.app/api/top-langs?username=aman9723&show_icons=true&locale=en&layout=compact"></Image>
                 <Image src="https://github-readme-stats.vercel.app/api?username=aman9723&show_icons=true&locale=en"></Image>
