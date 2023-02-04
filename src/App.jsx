@@ -64,7 +64,7 @@ function App() {
                 ]}
             />
             <Projects
-                img="/topsurvey.png"
+                img="/topSurvey.png"
                 title="Top Survey"
                 desc="TopSurvey offers a free online survey tool that helps to create and run surveys to capture the voices of people who matter most to you."
                 code="https://github.com/Aman9723/top-survey"
