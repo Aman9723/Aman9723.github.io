@@ -69,7 +69,7 @@ const Home = () => {
                     “Once a new technology rolls over you, if you're not part of
                     the steamroller, you're part of the road.” - Stewart Brand
                 </Text>
-                <a href="Aman-Singh-Chauhan-Resume.pdf" download>
+                {/* <a href="Aman-Singh-Chauhan-Resume.pdf" download> */}
                     <Button
                         bg={'#eee'}
                         color="#5b5b5b"
@@ -84,7 +84,7 @@ const Home = () => {
                         <GrDocumentText />
                         &nbsp; Resume
                     </Button>
-                </a>
+                {/* </a> */}
             </VStack>
             <Image
                 src="/homeImage.png"

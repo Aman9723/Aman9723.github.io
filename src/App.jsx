@@ -32,10 +32,42 @@ function App() {
                 Projects
             </Heading>
             <Projects
+                img="https://user-images.githubusercontent.com/65977764/215480105-f9068c3d-2d7b-42b9-80cc-1f5d56e7b0bf.png"
+                title="Stream"
+                desc="A real-time video and audio communication platform. With our app, you can easily connect with friends, family, or strangers from anywhere in the world."
+                code="https://github.com/Aman9723/stream"
+                live="https://great-ash-moss.glitch.me/"
+                stack={[
+                    'HTML5',
+                    'CSS3',
+                    'JavaScript',
+                    'Express.js',
+                    'Node.js',
+                    'WebRTC',
+                    'Socket.io',
+                ]}
+            />
+            <Projects
+                img="/helperApp.png"
+                title="Helper App"
+                desc="HelperApp is an app which allows people to reach out to other people or services. Users can post services here and the interested person may buy the services."
+                code="https://github.com/meshiv5/helper-app-frontend"
+                live="https://helper-app-two.vercel.app/"
+                stack={[
+                    'Next.js',
+                    'Redux',
+                    'Chakra UI',
+                    'Express.js',
+                    'Node.js',
+                    'Mongodb',
+                    'Socket.io',
+                ]}
+            />
+            <Projects
                 img="/topsurvey.png"
                 title="Top Survey"
                 desc="TopSurvey offers a free online survey tool that helps to create and run surveys to capture the voices of people who matter most to you."
-                code="https://github.com/Aman9723/smooth-dock-1057"
+                code="https://github.com/Aman9723/top-survey"
                 live="https://topsurvey.vercel.app/"
                 stack={[
                     'HTML5',
@@ -55,7 +87,7 @@ function App() {
             in Brooklyn, New York, that maintains a global crowdfunding
             platform focused on creativity. The companys stated mission
             is to "help bring creative projects to life".'
-                code="https://github.com/Aman9723/brawny-plough-6910"
+                code="https://github.com/Aman9723/kickstarter-clone"
                 live="https://the-great-aman9723-site.netlify.app/"
                 stack={['HTML5', 'CSS3', 'React.js', 'Chakra UI']}
             />
@@ -71,7 +103,7 @@ function App() {
                 img="/lyst.png"
                 title="Lyst Clone"
                 desc="This is a clone of Lyst. It is a global fashion search platform, offering fashion products from the world's leading fashion brands and stores online."
-                code="https://github.com/Aman9723/usable-trouble-1944"
+                code="https://github.com/Aman9723/lyst-clone"
                 live="https://profound-squirrel-2536cb.netlify.app/"
                 stack={['HTML5', 'CSS3', 'JavaScript']}
             />

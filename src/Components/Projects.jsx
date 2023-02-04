@@ -28,6 +28,8 @@ let obj = {
     Postman: '/postman.png',
     'Next.js': '/next.png',
     Redis: '/redis.png',
+    WebRTC: '/webRTC.png',
+    'Socket.io': 'https://socket.io/images/logo.svg',
 };
 
 const Projects = ({ img, title, desc, code, live, stack }) => {
